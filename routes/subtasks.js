@@ -1,7 +1,6 @@
 const Subtask = require("../models/subtask");
 const express = require("express");
 const router = express.Router();
-const { project, task, subtask } = require("../config/mocks");
 
 router.get("/", async (req, res) => {
   const subtasks = await Subtask.find({});
@@ -11,7 +10,7 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   const subtask = await Subtask.create(req.body);
-  res.json(subtask);
+  res.status(201).json(subtask);
 });
 
 router
