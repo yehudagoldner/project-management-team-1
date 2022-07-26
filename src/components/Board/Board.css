@@ -25,6 +25,18 @@
   position: relative;
   min-width: 15vw;
 }
+.left-icon {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  cursor: pointer;
+}
+.right-icon {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  cursor: pointer;
+}
 .board-card:after {
   content: "";
   position: absolute;
@@ -37,6 +49,7 @@
   width: 80%;
   margin: 2vh auto;
   text-align: center;
+  position: relative;
 }
 
 @media (max-width: 1300px) {
