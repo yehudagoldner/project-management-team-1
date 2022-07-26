@@ -3,16 +3,16 @@ const { statuses,urgencies} = require("./consts.js");
 const date = Math.floor(new Date().getTime() / 1000);
 
 const project = {
-  title: "todo app",
+  title: "Middle project",
   description:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, animi",
-  goal: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, animi",
+    "Middle project of AppleSeeds bootcamp",
+  goal: "practice everything up to React",
   id: "1",
   order: "1",
 };
 
 const task = {
-  title: "todo app",
+  title: "Create function component",
   status: statuses[1],
   project:
     "1",

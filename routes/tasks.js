@@ -1,7 +1,6 @@
 const Task = require("../models/task");
 const express = require("express");
 const router = express.Router();
-const { project, task, subtask } = require("../config/mocks");
 
 router.get("/", async (req, res) => {
   const tasks = await Task.find({});
@@ -11,7 +10,7 @@ router.get("/", async (req, res) => {
 
 router.post("/",async (req, res) => {
   const task = await Task.create(req.body);
-  res.json(task);
+  res.status(201).json(task);
 });
 
 router
@@ -26,7 +25,7 @@ router
   })
   .delete(async(req, res) => {
     const task = await Task.findByIdAndDelete(req.params.id)
-    res.json(task);
+    res.json({task, message:"this object has been deleted" });
   });
 
 module.exports = router;
