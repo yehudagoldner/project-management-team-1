@@ -20,11 +20,24 @@ router
     res.json(subtask);
   })
   .put(async (req, res) => {
-    const subtask = await Subtask.findByIdAndUpdate(
-      { id: req.params.id },
-      req.body
-    );
-    res.json(subtask);
+    const subtaskById= await Subtask.findById(req.params.id);
+    // try
+    {
+    if(!subtaskById){throw new Error("subtask was not found")};
+  
+    const newSubtask={};
+    if(req.body.name){newSubtask.name=req.body.name};
+    if(req.body.description){newSubtask.description=req.body.description};
+    if(req.body.date){newSubtask.date=req.body.date};
+    if(req.body.urgency){newSubtask.urgency=req.body.urgency};
+    if(req.body.isCompleted){newSubtask.isCompleted=req.body.isCompleted};
+    if(req.body.comments){newSubtask.comments=req.body.comments};
+    if(req.body.isActive){newSubtask.isActive=req.body.isActive};
+    if(req.body.task){newSubtask.task=req.body.task};
+    if(req.body.order){newSubtask.order=req.body.order};
+    const subtask = await Subtask.findByIdAndUpdate(      { _id: req.params.id }, newSubtask, {new:true}   );
+    res.json(subtask);}
+    // catch(err){res.send(err)}
   })
   .delete(async (req, res) => {
     const subtask = await Subtask.findByIdAndDelete(req.params.id);
