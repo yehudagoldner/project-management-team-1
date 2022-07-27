@@ -1,5 +1,6 @@
+import "./MainPage.css";
 import * as React from 'react';
-import Box from '@mui/material/Box';
+//import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 //import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -13,6 +14,7 @@ export default function BasicCard() {
   return (
     task.map((element) => {
        return (
+        <div className='card-board'>
         <Card className='card'>
         <CardContent>
         <Typography variant="h5" component="div">
@@ -23,6 +25,7 @@ export default function BasicCard() {
         </Typography>
       </CardContent>
     </Card>
+    </div>
        ) 
     })
     
