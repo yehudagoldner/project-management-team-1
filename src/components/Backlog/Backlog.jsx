@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DataGrid , GridRowsProp, GridColDef} from '@mui/x-data-grid';
-import type {} from '@mui/x-data-grid/themeAugmentation';
+// import type {} from '@mui/x-data-grid/themeAugmentation';
 import { createTheme } from '@mui/material/styles';
 import  './Backlog.css';
 // : GridRowsProp
@@ -31,7 +31,7 @@ const rows = [
   // interface BacklogProps {
   //   task: Task;
   // }
-  export default function Backlog() {
+  export default function Backlog({task}) {
     return (
       <div  style={{ height: 300, width: '60%' ,backgroundColor:"pink"}}>
         <div></div>
