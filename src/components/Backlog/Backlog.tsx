@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { DataGrid , GridRowsProp, GridColDef} from '@mui/x-data-grid';
 import type {} from '@mui/x-data-grid/themeAugmentation';
-import { createTheme } from '@mui/material/styles';
+// import { createTheme } from '@mui/material/styles';
 import  './Backlog.css';
+import { ThemeProvider } from '@emotion/react/types/theming';
+import { createTheme } from '@mui/material/styles';
+// import { createTheme } from '@mui/material';
 const rows: GridRowsProp = [
     { id: 1, col1: 'Hello', col2: 'World' ,col3:"dfdf"},
     { id: 2, col1: 'DataGridPro', col2: 'is Awesome',col3:"ee" },
@@ -20,7 +23,7 @@ const rows: GridRowsProp = [
       MuiDataGrid: {
         styleOverrides: {
           root: {
-            backgroundColor: 'blue',
+            backgroundColor: 'red',
           },
         },
       },
@@ -28,9 +31,9 @@ const rows: GridRowsProp = [
   });
   export default function Backlog() {
     return (
+
       <div  style={{ height: 300, width: '60%' ,}}>
         <button>Add Task</button>
         <DataGrid  rows={rows} columns={columns} />
-      </div>
-    );
+      </div>)
   }
