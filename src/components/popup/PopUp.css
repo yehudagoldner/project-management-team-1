@@ -1,0 +1,30 @@
+.main_container {
+  display: flex;
+}
+
+.first_container {
+  justify-content: flex-start;
+}
+.second_container {
+  justify-content: flex-end;
+}
+
+.btn:hover {
+  color: #ff2625;
+  border: 1px solid #ff2625;
+}
+
+.btn_colors {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn_one:hover {
+  background: #ff2625 !important;
+}
+.btn_two:hover {
+  background: #228b22 !important;
+}
+.btn_three:hover {
+  background: #ffbf00 !important;
+}

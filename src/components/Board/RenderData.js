@@ -1,20 +1,15 @@
-import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-// import { DragDropContext, Droppable } from "react-beautiful-dnd";
-import { task, cardHeader } from "../../taskData";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { cardHeader } from "../../taskData";
 
 import RenderCardContent from "./RenderCardContent";
 import "./Board.css";
 
 // Render Card
-const RenderCard = () => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    setData(task);
-  }, []);
 
+const RenderCard = ({ data, setData }) => {
   return cardHeader.map((header) => {
     return (
       <Card
