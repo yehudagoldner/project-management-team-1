@@ -13,6 +13,13 @@ router.post("/",async (req, res) => {
   res.status(201).json(task);
 });
 
+router.get("/project/:id", async (req, res) => {
+  const tasks = await Task.find({project:req.params.id});
+  console.log(tasks);
+  res.json(tasks);
+});
+
+
 router
   .route("/:id")
   .get(async (req, res) => {
