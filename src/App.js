@@ -2,9 +2,20 @@ import logo from "./logo.svg";
 import "./App.css";
 import Board from "./components/Board/Board";
 import MainPage from "./components/MainPage/MainPage";
+
+// import PopUp from "./components/Popup/PopUp";
+import Backlog from "./components/Backlog/Backlog.jsx";
+import Routing from "./components/Routing/Routing"
 import Backlog from "./components/Backlog/Backlog.tsx";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-function App() {
+export default function App() {
+  // return (
+  //   <div className="App">
+  //                <Routing />
+            {/* <Outlet /> */}
+      {/* <MainPage/> */}
+
+
   return (
 
 
@@ -20,13 +31,7 @@ function App() {
 
     </div>
   );
-  // return (
-  //   <div className="App">
-  //   <>
-  //     <Backlog />
-  //   </>
-  //   </div>
-  // );
+
 }
 
-export default App;
+

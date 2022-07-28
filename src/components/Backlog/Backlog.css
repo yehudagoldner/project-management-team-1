@@ -6,4 +6,8 @@
     border: 1px solid grey;
     border-radius: 20px;
 } */
+.Backlog{
+    height:100%;
+    display:flex;
 
+}
