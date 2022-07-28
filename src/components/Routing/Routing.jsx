@@ -1,4 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import MainPage from "../MainPage/MainPage";
+import Board from "../Board/Board";
+import Backlog from "../Backlog/Backlog";
+// import About from "../About";
+import PopUp from "../PopUp/PopUp";
+import App from "../../App";
 function Routing() {
   return (
     <div className="Routing">
@@ -6,10 +12,10 @@ function Routing() {
         <Route path="/" element={<App />} />
         <Route path="/mainpage" element={<MainPage />} />
         <Route index element={<MainPage />} />
-        <Route path="/board" element={<Board />} />
-        <Route path="/backlog" element={<Backlog />} />
-        <Route path="/subtask" element={<Subtask />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/board/:id" element={<Board />} />
+        <Route path="/backlog:id" element={<Backlog />} />
+        <Route path="/popup:id" element={<PopUp />} />
+        {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </div>
   );

@@ -30,3 +30,7 @@ body
  .link{
   text-decoration: none;
  }
+ .header{
+  padding-top:20vh;
+  color:white;
+ }

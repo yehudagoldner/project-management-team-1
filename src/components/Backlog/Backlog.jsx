@@ -3,6 +3,7 @@ import { DataGrid , GridRowsProp, GridColDef} from '@mui/x-data-grid';
 // import type {} from '@mui/x-data-grid/themeAugmentation';
 import { createTheme } from '@mui/material/styles';
 import  './Backlog.css';
+import { useEffect } from 'react';
 // : GridRowsProp
 const rows = [
     { id: 1, col1: 'Hello', col2: 'World' ,col3:"dfdf"},
@@ -32,11 +33,21 @@ const rows = [
   //   task: Task;
   // }
   export default function Backlog({task}) {
+const [subtasks,setSubtasks]=useState([]);
+
+useEffect(()=>{
+if(subtasks===[]){
+  
+}
+},[])
+
     return (
-      <div  style={{ height: 300, width: '60%' ,backgroundColor:"pink"}}>
+      <div className="Backlog">
+      <div  style={{ height: 400, width: '60%' ,backgroundColor:"white", margin:'auto'}}>
         <div></div>
         <button>Add Task</button>
         <DataGrid  rows={rows} columns={columns} />
+      </div>
       </div>
     );
   }
