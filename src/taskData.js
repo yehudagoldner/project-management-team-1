@@ -74,7 +74,7 @@ export const cardHeader = [
   },
   {
     id: 2,
-    name: "PROCESS",
+    name: "IN_PROCESS",
   },
   {
     id: 3,

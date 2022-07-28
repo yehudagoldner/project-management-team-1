@@ -3,14 +3,14 @@ import { useEffect, useState } from "react";
 import RenderCard from "./RenderData";
 import TaskHeader from "../TasksHeader/TasksHeader";
 import { API } from "../Api/Api";
-import {  useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Board = (props) => {
   const [data, setData] = useState([]);
   const [project, setProject] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const params = useParams();
-  const id = (params.id );
+  const id = params.id;
 
   useEffect(() => {
     const fetchTasks = async () => {
@@ -21,6 +21,7 @@ const Board = (props) => {
       console.log(projectId);
       try {
         const { data } = await API.get(`/tasks/project/${projectId}`);
+        console.log(data);
         setData(data);
         setIsLoading(false);
       } catch (error) {
@@ -39,6 +40,7 @@ const Board = (props) => {
 
       try {
         const { data } = await API.get(`/projects/${projectId}`);
+        console.log(data);
         setProject(data);
         setIsLoading(false);
       } catch (error) {
