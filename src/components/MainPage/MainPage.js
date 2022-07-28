@@ -6,12 +6,15 @@ import Typography from "@mui/material/Typography";
 import { task, cardHeader } from "../../taskData";
 import { useState, useEffect } from "react";
 import { API } from "../Api/Api";
+import MainHeader from "../MainHeader/MainHeader";
+
 import { Link } from "react-router-dom";
 
 export default function BasicCard() {
 
   return (
     <>
+    <MainHeader />
     <h1 className="header">Projects</h1>
     {task.map((element) => {
     return (
@@ -32,4 +35,5 @@ export default function BasicCard() {
     
   })}
   </>)
+
 }
