@@ -4,7 +4,6 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
   const projects = await Project.find({});
-  console.log(projects);
   res.json(projects);
 });
 

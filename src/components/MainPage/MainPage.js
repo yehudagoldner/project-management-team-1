@@ -34,7 +34,7 @@ export default function BasicCard() {
     {data.map((element) => {
     return (
       
-      <Link key={element.id} to={`/board/${element.id}`} className="link">
+      <Link key={element._id} to={`/board/${element._id}`} className="link">
       <div className="card-board">
         <Card className="card">
           <CardContent>

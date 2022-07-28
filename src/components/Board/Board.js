@@ -3,16 +3,21 @@ import { useEffect, useState } from "react";
 import RenderCard from "./RenderData";
 import TaskHeader from "../TasksHeader/TasksHeader";
 import { API } from "../Api/Api";
+import {  useParams } from "react-router-dom";
+
 const Board = (props) => {
   const [data, setData] = useState([]);
   const [project, setProject] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const params = useParams();
+  const id = (params.id );
 
   useEffect(() => {
     const fetchTasks = async () => {
       setIsLoading(true);
       // const projectId = window.btoa(props.match.params.id);
-      const projectId = props.match.params.id;
+      // const projectId = props.match.params._id;
+      const projectId = id;
       console.log(projectId);
       try {
         const { data } = await API.get(`/tasks/project/${projectId}`);
@@ -28,8 +33,10 @@ const Board = (props) => {
     const fetchProject = async () => {
       setIsLoading(true);
       // const projectId = window.btoa(props.match.params.id);
-      const projectId = props.match.params.id;
+      // const projectId = props.match.params._id;
+      const projectId = id;
       console.log(projectId);
+
       try {
         const { data } = await API.get(`/projects/${projectId}`);
         setProject(data);

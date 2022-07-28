@@ -6,7 +6,7 @@ const TasksHeader = ({ project }) => {
     <nav className="header-continer">
       <ul>
         <li className="first-li">
-          <Link to="">{project.title}</Link>
+          <Link to="/">{project.title}</Link>
           <PlayArrowIcon />
         </li>
         <li>
