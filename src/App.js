@@ -21,7 +21,7 @@ export default function App() {
         <Switch>
           <Route path="/" exact component={MainPage} />
           <Route path="/board/:id" exact component={Board} />
-          <Route path="/backlog" exact component={Backlog} />
+          <Route path="/backlog:id" exact component={Backlog} />
           <Route path="/popup" exact component={PopUp} />
           {/* <Route path="/about" element={About} /> */}
         </Switch>
