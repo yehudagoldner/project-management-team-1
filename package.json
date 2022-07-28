@@ -8,13 +8,11 @@
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.9.2",
     "@mui/x-data-grid": "^5.14.0",
+    "@mui/x-date-pickers": "^5.0.0-beta.2",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
-=======
     "axios": "^0.27.2",
->>>>>>> ebce496d1b617e509925b4bd10b48ab810363090
     "concurrently": "^7.3.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
@@ -22,6 +20,7 @@
     "nodemon": "^2.0.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dotenv": "^0.1.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"

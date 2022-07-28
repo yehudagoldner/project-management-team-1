@@ -1,7 +1,7 @@
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { DragDropContext, Droppable } from "react-beautiful-dnd";
+// import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { cardHeader } from "../../taskData";
 
 import RenderCardContent from "./RenderCardContent";
