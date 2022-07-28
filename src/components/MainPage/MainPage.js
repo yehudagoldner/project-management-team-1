@@ -11,15 +11,30 @@ import MainHeader from "../MainHeader/MainHeader";
 import { Link } from "react-router-dom";
 
 export default function BasicCard() {
+  
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+   const fetchProj = async() => {
+    try {
+      const {data} = await API.get("/projects/");
+      console.log(data);
+      setData(data);
+    } catch (error) {
+      console.log(error.massage);
+    }
+   }
+   fetchProj();
+  }, []);
 
   return (
     <>
     <MainHeader />
     <h1 className="header">Projects</h1>
-    {task.map((element) => {
+    {data.map((element) => {
     return (
       
-      <Link to={`/board/${element.id}`} className="link">
+      <Link key={element.id} to={`/board/${element.id}`} className="link">
       <div className="card-board">
         <Card className="card">
           <CardContent>
@@ -27,6 +42,8 @@ export default function BasicCard() {
               {element.id}
             </Typography>
             <Typography variant="body2">{element.title}</Typography>
+            <Typography variant="body2">{element.goal}</Typography>
+            <Typography variant="body2">{element.description}</Typography>
           </CardContent>
         </Card>
       </div>
