@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { API } from "../Api/Api";
+import { Link } from "react-router-dom";
 const RenderCardContent = ({ headerName, setData, data }) => {
   const updateTasks = async (newObj) => {
     try {
@@ -61,7 +62,12 @@ const RenderCardContent = ({ headerName, setData, data }) => {
           )}
           <CardContent>
             <Typography variant="h5" component="div">
-              {element.title}
+              <div className="card-content">
+                {element.title}
+                <Link to={{ pathname: `/backlog/${element._id}` }}>
+                  <button className="card-content-button">Sub Task</button>
+                </Link>
+              </div>
             </Typography>
           </CardContent>
           {element.status !== "DONE" ? (
