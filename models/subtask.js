@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const consts = require("../config/consts.js");
 
 const SubTaskSchema = new mongoose.Schema({
   name: {
@@ -16,6 +17,7 @@ const SubTaskSchema = new mongoose.Schema({
   },
   urgency: {
     type: "string",
+    default: consts.urgencies[1]
   },
   isCompleted: {
     type: Boolean,
@@ -23,6 +25,7 @@ const SubTaskSchema = new mongoose.Schema({
   },
   comments: {
     type: "string",
+    default: ""
   },
   isActive: {
     type: Boolean,

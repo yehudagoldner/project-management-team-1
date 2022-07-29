@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Board from "./components/Board/Board";
 import MainPage from "./components/MainPage/MainPage";
-import PopUp from "./components/Popup/PopUp";
+import PopUp from "./components/PopUp/PopUp";
 import Backlog from "./components/Backlog/Backlog.jsx";
 import Routing from "./components/Routing/Routing";
 import Main from "./components/Main/Main";

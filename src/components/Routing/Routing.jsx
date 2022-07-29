@@ -4,7 +4,7 @@ import Board from "../Board/Board";
 import Main from "../Main/Main";
 import Backlog from "../Backlog/Backlog";
 // import About from "../About";
-import PopUp from "../Popup/PopUp";
+import PopUp from "../PopUp/PopUp";
 import App from "../../App";
 function Routing() {
   return (
