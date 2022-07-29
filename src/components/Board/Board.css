@@ -51,6 +51,20 @@
   text-align: center;
   position: relative;
 }
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-content-button {
+  margin-top: 2vh;
+  border-radius: 0.5vw;
+  text-decoration: none;
+  cursor: pointer;
+}
+.card-content-button:hover {
+  background-color: aqua;
+}
 
 @media (max-width: 1300px) {
   .board-card-container {

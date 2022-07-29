@@ -1,13 +1,21 @@
 import * as React from "react";
 import { DataGrid, GridRowsProp, GridColDef } from "@mui/x-data-grid";
+
 import { useParams } from "react-router-dom";
+
+
 // import type {} from '@mui/x-data-grid/themeAugmentation';
 import { createTheme } from "@mui/material/styles";
 import "./Backlog.css";
 import { useEffect, useState } from "react";
+
 import MainHeader from "../MainHeader/MainHeader";
-import "./Backlog.css";
+
 import { API } from "../Api/Api";
+
+
+
+
 // import { ThemeProvider } from '@emotion/react/types/theming';
 // import { createTheme } from '@mui/material';
 
@@ -24,21 +32,19 @@ const columns = [
   { field: "col3", headerName: "Task Urgency", width: 150 },
 ];
 
-// const theme = createTheme({
-//   components: {
-//     MuiDataGrid: {
-//       styleOverrides: {
-//         root: {
-//           backgroundColor: "red",
-//         },
-//       },
-//     },
-//   },
-// });
 
-// interface BacklogProps {
-//   task: Task;
-// }
+const theme = createTheme({
+  components: {
+    MuiDataGrid: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "red",
+        },
+      },
+    },
+  },
+});
+
 export default function Backlog({ task }) {
   const [subtasks, setSubtasks] = useState([]);
   const params = useParams();

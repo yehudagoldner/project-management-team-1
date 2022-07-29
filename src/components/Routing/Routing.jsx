@@ -15,7 +15,7 @@ function Routing() {
         <Route path="/mainpage" element={<MainPage />} />
         <Route index element={<MainPage />} />
         <Route path="/board/:id" element={<Board />} />
-        <Route path="/backlog:id" element={<Backlog />} />
+        <Route path="/backlog/:id" element={<Backlog />} />
         <Route path="/popup:id" element={<PopUp />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
