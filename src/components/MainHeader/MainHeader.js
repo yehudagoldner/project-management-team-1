@@ -7,7 +7,7 @@ const MainHeader = () => {
     <nav className="header-continer">
       <ul>
         <li className="first-li">
-          <Link to="">SelectP</Link>
+          <Link to="/">SelectP</Link>
           <PlayArrowIcon />
         </li>
         <li>

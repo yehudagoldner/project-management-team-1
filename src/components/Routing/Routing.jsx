@@ -3,7 +3,7 @@ import MainPage from "../MainPage/MainPage";
 import Board from "../Board/Board";
 import Main from "../Main/Main";
 import Backlog from "../Backlog/Backlog.jsx";
-// import About from "../About";
+import About from "../About/About";
 import PopUp from "../PopUp/PopUp";
 import App from "../../App";
 function Routing() {
@@ -18,7 +18,7 @@ function Routing() {
         <Route path="/backlog/:id" element={<Backlog />} />
         {/* <Route path="/backlog/add" element={<AddSubtask />} /> */}
         <Route path="/backlog/add" element={<PopUp />} />
-        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/about" element={<About />} />
       </Routes>
     </div>
   );

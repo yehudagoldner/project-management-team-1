@@ -1,12 +1,16 @@
 import * as React from "react";
 import { Link, useParams } from "react-router-dom";
+
 import "./Backlog.css";
 import { useEffect, useState } from "react";
 import MainHeader from "../MainHeader/MainHeader";
 import { API } from "../Api/Api";
+import TasksHeader from "../TasksHeader/TasksHeader";
 
-export default function Backlog() {
+export default function Backlog(props) {
   const [subtasks, setSubtasks] = useState([]);
+  const [project, setProject] = useState({});
+
   const params = useParams();
   const taskId = params.id;
 

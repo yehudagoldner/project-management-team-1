@@ -139,9 +139,7 @@ export default function FormDialog() {
               <Button
                 className="btn_three"
                 value={yellow}
-                onClick={(e) => setYellow(e.target.value)
-              
-                }
+                onClick={(e) => setYellow(e.target.value)}
                 sx={{
                   bgcolor: "#FFBF00",
                   color: "#fff",

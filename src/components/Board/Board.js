@@ -69,7 +69,7 @@ const Board = (props) => {
     <div className="main-board">
       <TaskHeader project={project} />
       <div className="board-card-container">
-        <RenderCard data={data} setData={setData} />
+        <RenderCard data={data} setData={setData} project={project} />
       </div>
     </div>
   );
