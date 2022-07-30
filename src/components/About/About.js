@@ -42,9 +42,9 @@ const About = () => {
     </div>
   ) : (
     <>
-      <div className="main-page">
+      <div className="about-page">
         <MainHeader />
-        <div className="main-page-container">
+        <div className="about-page-container">
           <Card
             className="about-card"
             style={{
