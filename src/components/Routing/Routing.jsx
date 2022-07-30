@@ -17,7 +17,7 @@ function Routing() {
         <Route path="/board/:id" element={<Board />} />
         <Route path="/backlog/:id" element={<Backlog />} />
         {/* <Route path="/backlog/add" element={<AddSubtask />} /> */}
-        <Route path="/popup:id" element={<PopUp />} />
+        <Route path="/backlog/add" element={<PopUp />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
     </div>

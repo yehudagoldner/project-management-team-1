@@ -30,7 +30,6 @@ export default function Backlog() {
       <div className="subtasks">
         <h1 className="header">Subtasks</h1>
         <Link to={`/backlog/add`}>
-          {" "}
           <button className="add-subtask">Add Subtask</button>
         </Link>
         <div className="rows-content">
