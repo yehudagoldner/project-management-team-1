@@ -13,6 +13,11 @@ router.post("/", async (req, res) => {
   res.status(201).json(subtask);
 });
 
+router.get("/task/:id", async (req, res) => {
+  const subtasks = await Subtask.find({ task: req.params.id });
+  res.send(subtasks);
+});
+
 router
   .route("/:id")
   .get(async (req, res) => {

@@ -8,6 +8,31 @@
 } */
 .Backlog{
     height:100%;
-    display:flex;
-flex-direction: column;
+    /* display:flex;
+flex-direction: column; */
+}
+
+.Backlog span{
+    display:inline-block;
+    width: 30vw;
+}
+.Backlog .subtasks{
+font-size: 20px;
+}
+.row{
+    border-bottom: 1px solid grey;
+    line-height:40px;
+    background-color:aliceblue
+
+}
+.rows-content{
+    /* margin: 0 10vw; */
+}
+.add-subtask{
+    background-color:rgb(61, 60, 60);
+    width:10rem;
+    height:4rem;
+    color:white;font-size:2vh;
+    margin:2rem;
+    border-radius: 10px;
 }

@@ -2,7 +2,7 @@ import { Route, Routes, Switch } from "react-router-dom";
 import MainPage from "../MainPage/MainPage";
 import Board from "../Board/Board";
 import Main from "../Main/Main";
-import Backlog from "../Backlog/Backlog";
+import Backlog from "../Backlog/Backlog.jsx";
 // import About from "../About";
 import PopUp from "../PopUp/PopUp";
 import App from "../../App";
@@ -16,6 +16,7 @@ function Routing() {
         <Route index element={<MainPage />} />
         <Route path="/board/:id" element={<Board />} />
         <Route path="/backlog/:id" element={<Backlog />} />
+        {/* <Route path="/backlog/add" element={<AddSubtask />} /> */}
         <Route path="/popup:id" element={<PopUp />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
