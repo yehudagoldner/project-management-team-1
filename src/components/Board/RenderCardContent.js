@@ -5,7 +5,7 @@ import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import { API } from "../Api/Api";
 import { Link } from "react-router-dom";
-const RenderCardContent = ({ headerName, setData, data }) => {
+const RenderCardContent = ({ headerName, setData, data, project }) => {
   const updateTasks = async (newObj) => {
     try {
       const { data } = await API.put(`/tasks/${newObj._id}`, newObj);
@@ -64,7 +64,12 @@ const RenderCardContent = ({ headerName, setData, data }) => {
             <Typography variant="h5" component="div">
               <div className="card-content">
                 {element.title}
-                <Link to={{ pathname: `/backlog/${element._id}` }}>
+                <Link
+                  to={{
+                    pathname: `/backlog/${element._id}`,
+                    state: { project: project },
+                  }}
+                >
                   <button className="card-content-button">Sub Task</button>
                 </Link>
               </div>

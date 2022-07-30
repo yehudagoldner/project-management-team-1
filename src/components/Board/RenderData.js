@@ -9,7 +9,7 @@ import "./Board.css";
 
 // Render Card
 
-const RenderCard = ({ data, setData }) => {
+const RenderCard = ({ data, setData, project }) => {
   return cardHeader.map((header) => {
     return (
       <Card
@@ -35,6 +35,7 @@ const RenderCard = ({ data, setData }) => {
           headerName={header.name}
           setData={setData}
           data={data}
+          project={project}
         />
       </Card>
     );
