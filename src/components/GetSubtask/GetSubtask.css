@@ -1,0 +1,49 @@
+.main_container {
+    display: flex;
+  }
+  
+  .first_container {
+    justify-content: flex-start;
+  }
+  
+  .second_container {
+    justify-content: flex-end;
+  }
+  
+  .btn:hover {
+    color: #ff2625;
+    border: 1px solid #ff2625;
+  }
+  
+  .btn_colors {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .btn_one:hover {
+    background: #ff2625 !important;
+  }
+  
+  .btn_two:hover {
+    background: #228b22 !important;
+  }
+  
+  .btn_three:hover {
+    background: #ffbf00 !important;
+  }
+  
+  .active, .complete {
+    display: block;
+    margin: 1vh;
+    background-color: aliceblue;
+    color: black;
+    height: 20px;
+    width: 90px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  .active{
+  
+  }
+  .complete {}

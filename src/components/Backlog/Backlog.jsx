@@ -36,7 +36,7 @@ export default function Backlog(props) {
         <h1 className="header">Subtasks</h1>
         <Link to={`/backlog/add`}>
           <button className="add-subtask">Add Subtask</button>
-        </Link>
+        </Link >
         <div className="rows-content">
           <div className="rowHeader row">
             <span>Name</span>
@@ -47,7 +47,8 @@ export default function Backlog(props) {
             return (
               <Link
                 key={subtask._id}
-                to={`/popup/${subtask._id}`}
+                to={`/backlog/subtask/get/${subtask._id}`}
+                subtask={subtask}
                 className="link"
               >
                 <div className="subtask row">

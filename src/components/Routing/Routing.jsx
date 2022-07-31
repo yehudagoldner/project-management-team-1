@@ -5,6 +5,7 @@ import Main from "../Main/Main";
 import Backlog from "../Backlog/Backlog.jsx";
 import About from "../About/About";
 import PopUp from "../PopUp/PopUp";
+import GetSubtask from "../GetSubtask/GetSubtask";
 import App from "../../App";
 function Routing() {
   return (
@@ -18,6 +19,7 @@ function Routing() {
         <Route path="/backlog/:id" element={<Backlog />} />
         {/* <Route path="/backlog/add" element={<AddSubtask />} /> */}
         <Route path="/backlog/add" element={<PopUp />} />
+        <Route path="/backlog/subtask/get/:id" element={<GetSubtask />} />
         <Route path="/about" element={<About />} />
       </Routes>
     </div>
