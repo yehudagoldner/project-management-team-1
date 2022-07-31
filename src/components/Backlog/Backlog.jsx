@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import MainHeader from "../MainHeader/MainHeader";
 import { API } from "../Api/Api";
 import TasksHeader from "../TasksHeader/TasksHeader";
+import moment from "moment";
 
 export default function Backlog(props) {
   const [subtasks, setSubtasks] = useState([]);
@@ -38,9 +39,9 @@ export default function Backlog(props) {
         </Link>
         <div className="rows-content">
           <div className="rowHeader row">
-            <span>name</span>
-            <span>date</span>
-            <span>urgency</span>
+            <span>Name</span>
+            <span>Date</span>
+            <span>Urgency             </span>
           </div>
           {subtasks.map((subtask) => {
             return (
@@ -51,8 +52,8 @@ export default function Backlog(props) {
               >
                 <div className="subtask row">
                   <span>{subtask.name}</span>
-                  <span>{subtask.date}</span>
-                  <span>{subtask.urgency}</span>
+                  <span>{moment(subtask.date).format('DD-MM-yyyy')}</span>
+                  <span><span className={subtask.urgency==='LOW'  ? "green" :subtask.urgency==='MEDIUM'? "yellow":"red"}></span> </span>
 
                   <br />
                 </div>

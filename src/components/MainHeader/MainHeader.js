@@ -1,6 +1,7 @@
 import { useRef, useContext, useState } from "react";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Link } from "react-router-dom";
+import logo from '../../assets/logo.jpg'
 import "./MainHeader.css";
 const MainHeader = () => {
   return (
@@ -14,7 +15,7 @@ const MainHeader = () => {
           <Link to="/about">About</Link>
         </li>
       </ul>
-      <div className="last-li">LOGO</div>
+      <div className="last-li"> <img src={logo} alt=""/></div>
     </nav>
   );
 };

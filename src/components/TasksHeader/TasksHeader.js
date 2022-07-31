@@ -1,6 +1,8 @@
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Link } from "react-router-dom";
 import "./TasksHeader.css";
+import logo from '../../assets/logo.jpg'
+
 const TasksHeader = ({ project }) => {
   return (
     <nav className="header-continer">
@@ -19,7 +21,7 @@ const TasksHeader = ({ project }) => {
           <Link to="/about">About</Link>
         </li>
       </ul>
-      <div className="last-li">LOGO</div>
+      <div className="last-li"><img src={logo} alt=""/></div>
     </nav>
   );
 };

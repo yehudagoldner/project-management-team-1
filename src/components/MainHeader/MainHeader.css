@@ -56,3 +56,7 @@ nav ul li a:hover::before {
   color: #fff;
   align-items: center;
 }
+
+.last-li img {
+  height: 10vh;
+}

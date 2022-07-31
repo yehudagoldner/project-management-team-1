@@ -22,7 +22,6 @@ export default function FormDialog() {
   const [red, setRed] = useState();
   const [green, setGreen] = useState();
   const [yellow, setYellow] = useState();
-  
 
   const handleChange = (newValue) => {
     setValue(newValue);
@@ -164,7 +163,8 @@ export default function FormDialog() {
               </Stack>
               <Button />
             </LocalizationProvider>
-
+            <span className="active">Active</span>
+            <span className="complete">Complete</span>
             <DialogActions />
             <Button
               className="btn"

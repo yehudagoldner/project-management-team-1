@@ -13,7 +13,8 @@ const SubTaskSchema = new mongoose.Schema({
   },
   date: {
     type: "date",
-    default: Math.floor(new Date().getTime() / 1000),
+    // default: Math.floor(new Date().getTime() / 1000),
+    default: new Date()
   },
   urgency: {
     type: "string",
@@ -29,7 +30,7 @@ const SubTaskSchema = new mongoose.Schema({
   },
   isActive: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   task: {
     required: true,
